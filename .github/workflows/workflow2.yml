@@ -69,4 +69,4 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Calling the CLI function
-        run: ${{ inputs.clipath }}\\TotalTestFTCLI.bat -host 10.10.1.172 -port 16196 -u ADCDF -p sandhata -file C:\Users\sandhata\shirisha dodla\TOTAL_TEST\DEMO_PGM02C_GIT\DEMO_PGM02C_GIT\Tests\Scenarios --runner-jcl C:\Users\sandhata\shirisha dodla\TOTAL_TEST\DEMO_PGM02C_GIT\DEMO_PGM02C_GIT\Tests\JCL\Runner.jcl 
+        run: C:\Users\sandhata\Topaz\WorkbenchCLI\TotalTestCLI.bat -host 10.10.1.172 -port 16196 -u ADCDF -p sandhata -file C:\Users\sandhata\shirisha dodla\TOTAL_TEST\DEMO_PGM02C_GIT\DEMO_PGM02C_GIT\Tests\Scenarios --runner-jcl C:\Users\sandhata\shirisha dodla\TOTAL_TEST\DEMO_PGM02C_GIT\DEMO_PGM02C_GIT\Tests\JCL\Runner.jcl 
