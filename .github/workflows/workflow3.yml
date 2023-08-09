@@ -11,7 +11,7 @@ on:
       clipath:
         # Host/IP adress input from users
         description: CLI Execution path
-        default: C:\Users\sandhata\Topaz\WorkbenchCLI\TotalTestCLI.bat
+        default: C:\Users\sandhata\Topaz\WorkbenchCLI\TotalTestCLI
         required: true
       hciconnection:
         # Host/IP adress input from users
@@ -71,7 +71,7 @@ jobs:
       - name: Calling the CLI function
       #  run: ${{ inputs.clipath }} --host "${{ inputs.hciconnection }}" -port "${{ inputs.port }}" -u "${{ inputs.userId }}" -p "${{ secrets.HCI_PASSWORD }}" -file "${{ inputs.testFolderPath }}" --runner-jcl "${{inputs.jclpath}}"
         run: |
-         & "C:\Users\sandhata\Topaz\WorkbenchCLI\TotalTestFTCLI.bat" `
+         & "C:\Users\sandhata\Topaz\WorkbenchCLI\TotalTestFTCLI" `
          --host "${{ inputs.hciconnection }}" `
          --port "${{ inputs.port }}" `
          --u "${{ inputs.userId }}" `
