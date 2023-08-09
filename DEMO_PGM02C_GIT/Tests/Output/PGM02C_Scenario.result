@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XaUnitResult resultType="FAILURE" containsSimulation="false">
+  <ExecutionId>e4d856ae-7269-4ade-aa7e-c186ae347d4d</ExecutionId>
+  <Message>An error occurred and the execution has been stopped. The runner JCL contains the TOTALTEST_JOBCARD parameter, but no jobcard file could be found</Message>
+  <AST>
+    <XaUnit xmlns="http://www.xact.dk/xatester/v/1" xmlns:data="http://www.xact.dk/xatester/data/v/1" caseInsensitiveCompare="false">
+      <Test />
+    </XaUnit>
+  </AST>
+  <Context>
+    <ExecutionContext xmlns="http://www.xact.dk/xatester/v/1" environment="10.10.1.172:16196" logLevel="INFO" remote="false" useSimulations="true" uploadResult="false" timeout="600" readTimeout="30" debuggerType="NONE" jobInfoInterval="3" userid="ADCDF">
+      <platformruntime />
+      <ExtensionData>
+        <Parameter key="unittest.staticjcl">
+          <Value>C:/Users/sandhata/shirisha dodla/TOTAL_TEST/DEMO_PGM02C_GIT/DEMO_PGM02C_GIT/Tests/JCL/Runner.jcl</Value>
+        </Parameter>
+      </ExtensionData>
+      <XaUnit xmlns:data="http://www.xact.dk/xatester/data/v/1" componentNameUnderTest="PGM02C" caseInsensitiveCompare="false" path="PGM02C_Scenario.context">
+        <Test>
+          <Unittest testscenariopath="PGM02C_Scenario.testscenario" moduleName="PGM02C" />
+        </Test>
+      </XaUnit>
+      <ExternalResources />
+    </ExecutionContext>
+  </Context>
+  <Started>20230809-10-45-44</Started>
+  <Ended>20230809-10-46-02</Ended>
+</XaUnitResult>

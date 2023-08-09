@@ -1,0 +1,29 @@
+10:45:44.740 INFO      Engine           Test Scenario execution started
+10:45:44.756 INFO      Engine           Using context settings:
+  Engine Version                : 20.10.3.v20220524-1628_164
+  Environment id                : 10.10.1.172:16196
+  Environment type              : Batch
+  Operating system              : ZOS
+  zOS agent version             : NEWEST
+  Server address                : 10.10.1.172
+  Server port                   : 16196
+  Job execution timeout seconds : 600
+  Job info interval seconds     : 3
+  Socket read timeout           : 30
+  Encoding                      : 
+  Codepage                      : 1047
+  Host user Id                  : ADCDF
+  Use Repository Server         : true
+  Account Information           : 
+  Dataset High Level Qualifier  : 
+10:45:44.764 INFO      Engine           Setting variables from context and context data extensions
+10:45:44.768 INFO      Engine             id: environmentId      value: 10.10.1.172:16196
+10:45:44.775 INFO      Engine             id: environmentType    value: BATCH
+10:45:44.779 INFO      Engine             id: userId             value: ADCDF
+10:45:44.783 INFO      Engine             id: accountingInfo     value: 
+10:45:44.792 INFO      Engine             id: datasetHQL         value: 
+10:45:44.824 INFO      Unittest         Interpreting Unittest of module: PGM02C testscenario path: PGM02C_Scenario.testscenario
+10:45:53.749 INFO      Unittest         Static JCL is being used, path is: C:/Users/sandhata/shirisha dodla/TOTAL_TEST/DEMO_PGM02C_GIT/DEMO_PGM02C_GIT/Tests/JCL/Runner.jcl
+10:46:02.505 ERROR     Engine           The runner JCL contains the TOTALTEST_JOBCARD parameter, but no jobcard file could be found
+10:46:02.509 ERROR     Engine           An error occurred. Now stopping the execution.
+10:46:02.515 INFO      Engine           Test Scenario execution ended

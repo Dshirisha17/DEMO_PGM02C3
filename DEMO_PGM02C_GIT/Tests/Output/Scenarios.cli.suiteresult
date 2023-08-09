@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XaSuiteResult resultType="FAILURE" containsSimulation="false">
+  <Message>Total 1 tests failed out of 1 tests.</Message>
+  <Started>20230809-10-45-44</Started>
+  <Ended>20230809-10-46-02</Ended>
+  <XaUnitResults>
+    <XaUnitResult path="../Scenarios/PGM02C_Scenario.context" xaUnitPath="../Scenarios/PGM02C_Scenario.context" resultPath="PGM02C_Scenario.result" containsSimulation="false" resultType="FAILURE" duration="17725" componentUnderTest="PGM02C">
+      <CC />
+      <Message>An error occurred and the execution has been stopped. The runner JCL contains the TOTALTEST_JOBCARD parameter, but no jobcard file could be found</Message>
+      <DetailedMessage>No log information</DetailedMessage>
+    </XaUnitResult>
+  </XaUnitResults>
+</XaSuiteResult>

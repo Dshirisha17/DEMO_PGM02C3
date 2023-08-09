@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?totaltestVersion 20.10.3.v20220524-1628_164?>
+<!--Topaz for Total Test 20.10.3.v20220524-1628_164 09-Aug-2023, 10:46:02 AM-->
+<testExecutions version="1">
+  <file path="C:\Users\sandhata\shirisha dodla\TOTAL_TEST\DEMO_PGM02C_GIT\DEMO_PGM02C_GIT\Tests\Scenarios\PGM02C_Scenario.context">
+    <testCase name="PGM02C_Scenario.context" message="An error occurred and the execution has been stopped. The runner JCL contains the TOTALTEST_JOBCARD parameter, but no jobcard file could be found" duration="0">
+      <error />
+    </testCase>
+  </file>
+</testExecutions>
