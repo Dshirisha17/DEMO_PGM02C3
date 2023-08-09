@@ -71,7 +71,7 @@ jobs:
       - name: Calling the CLI function
       #  run: ${{ inputs.clipath }} --host "${{ inputs.hciconnection }}" -port "${{ inputs.port }}" -u "${{ inputs.userId }}" -p "${{ secrets.HCI_PASSWORD }}" -file "${{ inputs.testFolderPath }}" --runner-jcl "${{inputs.jclpath}}"
         run: |
-         & "C:\Users\sandhata\Topaz\WorkbenchCLI\TotalTestFTCLI" `
+         & "${{ inputs.clipath }}" `
          --host "${{ inputs.hciconnection }}" `
          --port "${{ inputs.port }}" `
          --u "${{ inputs.userId }}" `
