@@ -3,8 +3,8 @@ name: workflow2
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
+#  push:
+#    branches: [ "main" ]
   
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -69,4 +69,4 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Calling the CLI function
-        run: C:\Users\sandhata\Topaz\WorkbenchCLI\TotalTestFTCLI.bat -host 10.10.1.172 -port 16196 -u ADCDF -p sandhata -file C:\Users\sandhata\shirisha dodla\TOTAL_TEST\DEMO_PGM02C_GIT\DEMO_PGM02C_GIT\Tests\Scenarios --runner-jcl C:\Users\sandhata\shirisha dodla\TOTAL_TEST\DEMO_PGM02C_GIT\DEMO_PGM02C_GIT\Tests\JCL\Runner.jcl 
+        run: ${{ inputs.clipath }}\\TotalTestFTCLI.bat -host 10.10.1.172 -port 16196 -u ADCDF -p sandhata -file C:\Users\sandhata\shirisha dodla\TOTAL_TEST\DEMO_PGM02C_GIT\DEMO_PGM02C_GIT\Tests\Scenarios --runner-jcl C:\Users\sandhata\shirisha dodla\TOTAL_TEST\DEMO_PGM02C_GIT\DEMO_PGM02C_GIT\Tests\JCL\Runner.jcl 
