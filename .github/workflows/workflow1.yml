@@ -1,0 +1,20 @@
+name: Workflow1
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  trigger:
+    runs-on: self-hosted
+
+    steps:
+      - name: Workflow2
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.ACTIONS_KEY }}
+          repository: Dshirisha17/DEMO_PGM02C3
+
+
+          
