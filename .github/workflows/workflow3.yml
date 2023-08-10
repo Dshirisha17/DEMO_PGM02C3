@@ -53,12 +53,6 @@ on:
         description: HCI User ID
         default: "ADCDF"
         required: true
-env:
-  HCICONNECTION: ${{ github.event.inputs.hciconnection }}
-  PORT: ${{ github.event.inputs.port }}
-  USERID: ${{ github.event.inputs.userId }}
-  TESTFOLDERPATH: ${{ github.event.inputs.testFolderPath }}
-  JCLPATH: ${{ github.event.inputs.jclpath }}    
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -67,6 +61,11 @@ jobs:
     runs-on: self-hosted
     env:
      HCI_PASSWORD: ${{ secrets.HCI_PASSWORD }}
+     HCICONNECTION: ${{ github.event.inputs.hciconnection }}
+     PORT: ${{ github.event.inputs.port }}
+     USERID: ${{ github.event.inputs.userId }}
+     TESTFOLDERPATH: ${{ github.event.inputs.testFolderPath }}
+     JCLPATH: ${{ github.event.inputs.jclpath }}    
     #runs-on: windows-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -80,6 +79,7 @@ jobs:
              echo "testFolderPath: $TESTFOLDERPATH"
              echo "jclpath: $JCLPATH"
       - name: Calling the CLI function
-        run: ${{ inputs.clipath }}\\TotalTestFTCLI.bat --host "${{ inputs.hciconnection }}" -port "${{ inputs.port }}" -u "${{ inputs.userId }}" -p "${{ secrets.HCI_PASSWORD }}" -file "${{ inputs.testFolderPath }}" --runner-jcl "${{inputs.jclpath}}"
-       
+      #  run: ${{ inputs.clipath }}\\TotalTestFTCLI.bat --host "${{ inputs.hciconnection }}" -port "${{ inputs.port }}" -u "${{ inputs.userId }}" -p "${{ secrets.HCI_PASSWORD }}" -file "${{ inputs.testFolderPath }}" --runner-jcl "${{inputs.jclpath}}"
+        run: |
+          & "\\TotalTestFTCLI.bat" --host "$HCICONNECTION" -port "$PORT" -u "$USERID" -p "$HCI_PASSWORD" -file "$TESTFOLDERPATH" --runner-jcl "$JCLPATH" 
         
