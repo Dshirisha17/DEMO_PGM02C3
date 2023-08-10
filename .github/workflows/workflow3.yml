@@ -72,7 +72,7 @@ jobs:
         #  "${{ github.event.inputs.clipath }}" -host "${{ github.event.inputs.hciconnection }}" -port "${{github.event.inputs.port }}" -u "${{ github.event.inputs.userId }}" -p "${{ github.event.secrets.HCI_PASSWORD }}" -file "${{ github.event.inputs.testFolderPath }}" --runner-jcl "${{ github.event.inputs.jclpath }}"
         run: |
           $clipath = "${{ github.event.inputs.clipath }}"
-          $hciconnection = "${{ github.event.inputs.hciconnection }}"
+          $hciconnection = "${{ github.event.inputs.hciconnection=10.10.1.172}}"
           $port = "${{ github.event.inputs.port }}"
           $userId = "${{ github.event.inputs.userId }}"
           $testFolderPath = "${{ github.event.inputs.testFolderPath }}"
