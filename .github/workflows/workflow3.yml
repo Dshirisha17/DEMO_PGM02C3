@@ -3,11 +3,11 @@ name: workflow3
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
-#  push:
- #   branches: [ "main" ]
+  push:
+    branches: [ "main" ]
 # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-    inputs:
+     inputs:
       clipath:
         # Host/IP adress input from users
         description: CLI Execution path
@@ -53,7 +53,12 @@ on:
         description: HCI User ID
         default: "ADCDF"
         required: true
-        
+env:
+  HCICONNECTION: ${{ github.event.inputs.hciconnection }}
+  PORT: ${{ github.event.inputs.port }}
+  USERID: ${{ github.event.inputs.userId }}
+  TESTFOLDERPATH: ${{ github.event.inputs.testFolderPath }}
+  JCLPATH: ${{ github.event.inputs.jclpath }}    
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
