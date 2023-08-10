@@ -11,7 +11,7 @@ on:
       clipath:
         # Host/IP adress input from users
         description: CLI Execution path
-        default: C:\Users\sandhata\Topaz\WorkbenchCLI
+        default: C:\\Users\\sandhata\\Topaz\\WorkbenchCLI
         required: true
       hciconnection:
         # Host/IP adress input from users
