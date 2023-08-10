@@ -66,6 +66,14 @@ jobs:
     steps:
       - run: git config --global core.longpaths true     
       # Runs a single command using the runners shell
+      - run: |
+          echo "clipath: ${{ github.event.inputs.clipath }}"
+          echo "hciconnection: ${{ github.event.inputs.hciconnection }}"
+          echo "port: ${{ github.event.inputs.port }}"
+          echo "userId: ${{ github.event.inputs.userId }}"
+          echo "testFolderPath: ${{ github.event.inputs.testFolderPath }}"
+          echo "jclpath: ${{ github.event.inputs.jclpath }}"
+          echo "HCI_PASSWORD: ${{ secrets.HCI_PASSWORD }}"
       - name: Calling the CLI function
        # run: ${{ inputs.clipath }} --host "${{ inputs.hciconnection }}" -port "${{ inputs.port }}" -u "${{ inputs.userId }}" -p "${{ secrets.HCI_PASSWORD }}" -file "${{ inputs.testFolderPath }}" --runner-jcl "${{inputs.jclpath}}"
         run: |
