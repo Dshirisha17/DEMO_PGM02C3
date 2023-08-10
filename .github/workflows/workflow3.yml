@@ -67,5 +67,5 @@ jobs:
       - run: git config --global core.longpaths true     
       # Runs a single command using the runners shell
       - name: Calling the CLI function
-        run: ${{ inputs.clipath }}`\\TotalTestFTCLI.bat` --host "${{ inputs.hciconnection }}" -port "${{ inputs.port }}" -u "${{ inputs.userId }}" -p "${{ secrets.HCI_PASSWORD }}" -file "${{ inputs.testFolderPath }}" --runner-jcl "${{inputs.jclpath}}"
+        run: ${{ inputs.clipath }}`$PWD\\TotalTestFTCLI.bat` --host "${{ inputs.hciconnection }}" -port "${{ inputs.port }}" -u "${{ inputs.userId }}" -p "${{ secrets.HCI_PASSWORD }}" -file "${{ inputs.testFolderPath }}" --runner-jcl "${{inputs.jclpath}}"
         
