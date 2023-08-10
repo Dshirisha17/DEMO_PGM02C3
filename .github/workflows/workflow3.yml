@@ -73,6 +73,7 @@ jobs:
       # Runs a single command using the runners shell
       - run: | 
              echo "${{ secrets.HCI_PASSWORD }}"
+             echo  "HCI Connection: ${{ inputs.hciconnection }}"
              echo "hciconnection: $HCICONNECTION"
              echo "port: $PORT"
              echo "userId: $USERID"
