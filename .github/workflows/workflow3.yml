@@ -64,7 +64,12 @@ jobs:
     #runs-on: windows-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - run: git config --global core.longpaths true     
+      - run: git config --global core.longpaths true  
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up PowerShell
+        uses: actions/setup-powershell@v2
       # Runs a single command using the runners shell
       - name: Calling the CLI function
        # run: ${{ inputs.clipath }} --host "${{ inputs.hciconnection }}" -port "${{ inputs.port }}" -u "${{ inputs.userId }}" -p "${{ secrets.HCI_PASSWORD }}" -file "${{ inputs.testFolderPath }}" --runner-jcl "${{inputs.jclpath}}"
@@ -72,7 +77,7 @@ jobs:
         #  "${{ github.event.inputs.clipath }}" -host "${{ github.event.inputs.hciconnection }}" -port "${{github.event.inputs.port }}" -u "${{ github.event.inputs.userId }}" -p "${{ github.event.secrets.HCI_PASSWORD }}" -file "${{ github.event.inputs.testFolderPath }}" --runner-jcl "${{ github.event.inputs.jclpath }}"
         run: |
           $clipath = "${{ github.event.inputs.clipath }}"
-          $hciconnection = "${{ github.event.inputs.hciconnection=10.10.1.172}}"
+          $hciconnection = "${{ github.event.inputs.hciconnection}}"
           $port = "${{ github.event.inputs.port }}"
           $userId = "${{ github.event.inputs.userId }}"
           $testFolderPath = "${{ github.event.inputs.testFolderPath }}"
