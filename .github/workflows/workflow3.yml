@@ -36,7 +36,7 @@ on:
       jclpath:
       # jcl runner
         description: jcl runner name
-        default: C:\Users\sandhata\shirisha dodla\TOTAL_TEST\DEMO_PGM02C_GIT\DEMO_PGM02C_GIT\Tests\Scenarios\JCL\Runner.jcl
+        default: C:\Users\sandhata\shirisha dodla\TOTAL_TEST\DEMO_PGM02C_GIT\DEMO_PGM02C_GIT\Tests\JCL\Runner.jcl
         required: true
       workspace:
         # Workspcae location of the customer input from the user.
