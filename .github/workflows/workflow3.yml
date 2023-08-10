@@ -69,4 +69,4 @@ jobs:
       - name: Calling the CLI function
        # run: ${{ inputs.clipath }} --host "${{ inputs.hciconnection }}" -port "${{ inputs.port }}" -u "${{ inputs.userId }}" -p "${{ secrets.HCI_PASSWORD }}" -file "${{ inputs.testFolderPath }}" --runner-jcl "${{inputs.jclpath}}"
         run: |
-          "${{ inputs.clipath }}" --host "${{ inputs.hciconnection }}" -port "${{ inputs.port }}" -u "${{ inputs.userId }}" -p "${{ secrets.HCI_PASSWORD }}" -file "${{ inputs.testFolderPath }}" --runner-jcl "${{ inputs.jclpath }}"
+          "${{ github.event.inputs.clipath }}" --host "${{ github.event.inputs.hciconnection }}" -port "${{github.event.inputs.port }}" -u "${{ github.event.inputs.userId }}" -p "${{ github.event.secrets.HCI_PASSWORD }}" -file "${{ github.event.inputs.testFolderPath }}" --runner-jcl "${{ github.event.inputs.jclpath }}"
